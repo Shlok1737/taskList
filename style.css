@@ -1,0 +1,126 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+}
+
+
+
+span {
+  white-space: pre-wrap;
+}
+
+
+.edit{
+margin-left: 10px;
+}
+
+.del{
+margin-left: 10px;
+}
+
+/* Sundar website CSS starts from here */
+
+
+#addBtn{
+  background-color: black;
+  color: white;
+  border: 2px solid white ;
+  border-radius: 10%;
+}
+
+.edit{
+  background-color: black;
+  color: white;
+  border: 1px solid white ;
+  border-radius: 10%;
+}
+
+.del{
+  background-color: black;
+  color: white;
+  border: 1px solid white ;
+  border-radius: 10%;
+}
+
+body{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  color: white;
+  background-color: rgb(11,11,11);
+  padding-top: 20px;
+  padding-left: 40px;
+
+}
+
+
+h1{
+  height: 50px;
+  font-size: 40px;
+}
+
+
+.bigdiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputdiv{
+  display: flex;
+  align-items: center;
+}
+
+
+
+#input{
+  background-color: rgb(15, 15, 15);
+  height: 50px;
+  width: 430px;
+  color: white;
+}
+
+#addBtn{
+  margin: 20px;
+  height: 40px;
+}
+
+#taskList{
+  margin: 20px;
+  padding: 0px;
+
+}
+
+li{
+  margin: 20px;
+}
+
+.edit{
+  margin: 10px;
+}
+
+.del{
+  margin: 10px;
+}
+
+
+li {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+li span {
+    flex-grow: 1;
+    word-break: break-word; /* allows long text to wrap if necessary */
+}
+
+li {
+  border: 1px solid white;
+  padding: 10px;
+}
+
+
