@@ -27,21 +27,21 @@ margin-left: 10px;
   background-color: black;
   color: white;
   border: 2px solid white ;
-  border-radius: 10%;
+  
 }
 
 .edit{
   background-color: black;
   color: white;
   border: 1px solid white ;
-  border-radius: 10%;
+  
 }
 
 .del{
   background-color: black;
   color: white;
   border: 1px solid white ;
-  border-radius: 10%;
+  
 }
 
 body{
@@ -185,3 +185,22 @@ button {
 }
 
 
+
+
+/* Give more space inside each task box */
+
+li {
+  padding: 15px;
+  display: flex;
+  flex-direction: column; /* Stack items */
+  align-items: flex-start; /* Keep text left-aligned */
+  gap: 10px; /* Space between text and buttons */
+}
+
+/* Buttons take full width on mobile for better tap target */
+
+@media (max-width: 600px) {
+  li button {
+    width: 100%;
+  }
+}
