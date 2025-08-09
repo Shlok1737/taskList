@@ -113,7 +113,9 @@ let elementBeingDragged = null;
 function handleDragStart(e) {
   elementBeingDragged = this;
   e.dataTransfer.effectAllowed = 'move';
-  e.dataTransfer.setData('text/html', this.outerHTML);
+// niche wali line ki need nhi thi after code updation
+//  e.dataTransfer.setData('text/html', this.outerHTML);
+
   this.classList.add('dragging'); //for css styling only
 }
 
@@ -130,17 +132,16 @@ function handleDragLeave() {
 
 function handleDrop(e) {
   if (e.stopPropagation) e.stopPropagation();
+
   if (elementBeingDragged !== this) {
-    //"this" is the element on which elementBeingDragged is being dropped on
-    this.parentNode.removeChild(elementBeingDragged); 
-    const dropHTML = e.dataTransfer.getData('text/html');  //dropHtml is the html of the element being dragged
-    this.insertAdjacentHTML('beforebegin', dropHTML);
-    const dropElem = this.previousSibling; 
-    addDnDHandlers(dropElem);
+    // Move the actual element node, not its HTML
+    this.parentNode.insertBefore(elementBeingDragged, this);
     saveTasks();
   }
+
   return false;
 }
+
 
 function handleDragEnd() {
   //removig the css when element is finally dropped
