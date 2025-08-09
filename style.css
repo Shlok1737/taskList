@@ -187,20 +187,4 @@ button {
 
 
 
-/* Give more space inside each task box */
 
-li {
-  padding: 15px;
-  display: flex;
-  flex-direction: column; /* Stack items */
-  align-items: flex-start; /* Keep text left-aligned */
-  gap: 10px; /* Space between text and buttons */
-}
-
-/* Buttons take full width on mobile for better tap target */
-
-@media (max-width: 600px) {
-  li button {
-    width: 100%;
-  }
-}
