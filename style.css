@@ -124,3 +124,64 @@ li {
 }
 
 
+
+/* Responsive tweaks - no color changes */
+
+
+
+.bigdiv {
+  width: 90%;
+  max-width: 600px; /* Keeps it tidy on large screens */
+}
+
+.inputdiv {
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  gap: 10px; /* Keep some space between input and button */
+}
+
+#input {
+  flex: 1; /* Allow input to stretch */
+  min-width: 200px; /* Prevent from getting too narrow */
+  box-sizing: border-box;
+}
+
+button {
+  flex-shrink: 0; /* Keep button size stable */
+}
+
+/* Mobile: stack input and button vertically */
+@media (max-width: 600px) {
+  body {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .inputdiv {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #input {
+    width: 100%;
+    height: auto; /* Let it adjust naturally */
+    min-height: 50px;
+  }
+
+  #addBtn {
+    width: 100%;
+    height: 45px;
+    margin: 0;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  li button {
+    width: 100%;
+    margin: 5px 0 0 0;
+  }
+}
+
+
